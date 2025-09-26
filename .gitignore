@@ -1,0 +1,24 @@
+# Archivos del sistema MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Iconos de carpeta
+Icon?
+._*
+
+# Archivos de Spotlight
+.Spotlight-V100
+
+# Archivos de Thumbs
+.Trashes
+
+# Archivos temporales de MacOS
+*.swp
+*.swo
+
+# Archivos de volúmenes
+.VolumeIcon.icns
+
+# Archivos de Time Machine
+.Backup*
