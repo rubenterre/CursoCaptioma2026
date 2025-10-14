@@ -1,0 +1,42 @@
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(./fonts/OpenSans-VariableFont_wdth.ttf);
+}
+
+:root{
+    --color-primary: white;
+    --color-secondary: black; 
+    --font-primary: OpenSans;
+}
+
+body {
+ background: var(--color-secondary);
+ color: var(--color-primary) ;
+ -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+ font-size: 20px;
+ font-family: var(--font-primary);
+}
+
+button {
+ cursor: pointer;
+}
+
+
+/* Estilos xerais */
+
+/* Header */
+p{
+    font-size: 1rem;
+}
