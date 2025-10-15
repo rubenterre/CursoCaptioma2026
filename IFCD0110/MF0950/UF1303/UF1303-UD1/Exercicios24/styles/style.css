@@ -41,14 +41,14 @@ button {
     padding-left: 20px; /* Afecta só a esquerda */
 
     /* Margin: espazo exterior ao borde */
-    margin: 20px;
-    margin: 20px 20px 20px 20px;
-    margin: 20px 20px;
+    margin: 20px; /* Afecta a tódolos lados */
+    margin: 20px 20px 20px 20px; /* Arriba, dereita, abaixo, esquerda */
+    margin: 20px 20px;  /* Afecta a arriba e abaixo e a dereita e esquerda */
 
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
+    margin-top: 20px; /* Afecta só a arriba */
+    margin-right: 20px;  /* Afecta só a dereita */
+    margin-bottom: 20px; /* Afecta só a abaixo */
+    margin-left: 20px; /* Afecta só a esquerda */
 
     /* Sombra caixa */
 
