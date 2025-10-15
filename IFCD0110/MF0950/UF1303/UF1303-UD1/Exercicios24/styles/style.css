@@ -30,17 +30,17 @@ button {
     color: rgb(110, 16, 16);
     border: 2px dashed black;
 
-    /* Padding */
-    padding: 20px;
-    padding: 20px 20px 20px 20px;
-    padding: 20px 20px;
+    /* Padding: espazo interior */
+    padding: 20px; /* Afecta a tódolos lados */
+    padding: 20px 20px 20px 20px; /* Arriba, dereita, abaixo, esquerda */
+    padding: 20px 20px; /* Afecta a arriba e abaixo e a dereita e esquerda */
 
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
+    padding-top: 20px; /* Afecta só a arriba */
+    padding-right: 20px; /* Afecta só a dereita */
+    padding-bottom: 20px; /* Afecta só a abaixo */
+    padding-left: 20px; /* Afecta só a esquerda */
 
-    /* Margin */
+    /* Margin: espazo exterior ao borde */
     margin: 20px;
     margin: 20px 20px 20px 20px;
     margin: 20px 20px;
@@ -54,6 +54,23 @@ button {
 
     box-shadow: 2px 5px 10px gray;
 }
+
+/* Diferentes formas de aplicar unha pseudoclase
+
+p:hover{
+    background-color: brown;
+}
+
+#inicio{
+    width: 100px;
+    background-color: aqua;
+}
+#inicio:hover{
+    width: 300px;
+    background-color: blueviolet;
+}
+
+*/
 
 .caixa:hover{
     background-color: green;
