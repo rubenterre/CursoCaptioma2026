@@ -1,0 +1,97 @@
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+ background: white;
+ color: black;
+ -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+ font-size: 14px;
+ font-family: sans-serif;
+}
+
+button {
+ cursor: pointer;
+}
+
+/* Estilos xerais */
+
+.caixa{
+    width: 400px;
+    height: 400px;
+    color: rgb(110, 16, 16);
+    border: 2px dashed black;
+
+    /* Padding */
+    padding: 20px;
+    padding: 20px 20px 20px 20px;
+    padding: 20px 20px;
+
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+
+    /* Margin */
+    margin: 20px;
+    margin: 20px 20px 20px 20px;
+    margin: 20px 20px;
+
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+
+    /* Sombra caixa */
+
+    box-shadow: 2px 5px 10px gray;
+}
+
+.caixa:hover{
+    background-color: green;
+}
+
+.azul{
+    background-color: blue;
+}
+
+.amarelo{
+    background-color: yellow;
+}
+
+.vermello{
+    background-color: red;
+}
+
+.sublinado{
+    text-decoration: underline;
+}
+
+.redonda{
+    border-radius: 10px;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.logo{
+    margin: 20px;
+    width: 500px;
+    box-shadow: 2px 5px 10px black;
+}
+
+.logo-dropshadow{
+    margin: 20px;
+    width: 500px;
+    filter: drop-shadow(2px 5px 5px black);
+}
