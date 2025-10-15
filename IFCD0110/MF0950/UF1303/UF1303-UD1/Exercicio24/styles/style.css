@@ -11,6 +11,7 @@ body {
  background: white;
  color: black;
  -webkit-font-smoothing: antialiased;
+ cursor: url(../puntero.png), auto; 
 }
 
 body, input, button {
