@@ -37,7 +37,27 @@ button {
 
 /* Estilos xerais */
 
-/* Header */
-p{
-    font-size: 1rem;
+/* Float */
+
+.section1{
+    float: left;
+    width: 50%;
+    background-color: blue;
+    padding: 10px;
+}
+
+.section2{
+    float: right;
+    width: 50%;
+    background-color: red;
+    padding: 10px;
+
+}
+
+.clearfix{
+    clear: both;
+}
+
+footer{
+    padding: 10px;
 }

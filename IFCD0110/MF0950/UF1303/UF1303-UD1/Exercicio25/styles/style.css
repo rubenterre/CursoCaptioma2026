@@ -10,7 +10,7 @@
 body {
  background: rgb(108, 85, 85);
  color: white;
- -webkit-font-smoothing: antialiased;
+ height: 100vh;
 }
 
 body, input, button {

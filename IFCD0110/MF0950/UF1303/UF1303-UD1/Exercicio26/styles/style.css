@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+ background: ;
+ color: ;
+ -webkit-font-smoothing: antialiased;
+} */
+
+body, input, button {
+ font-size: 14px;
+ font-family: sans-serif;
+}
+
+button {
+ cursor: pointer;
+}
+
+/* Estilos xerais */
+
+body{
+    height: 200vh;
+    width: 100vw;
+    padding: 30px;
+/*  background: #F59B1A;
+    background: linear-gradient(97deg,rgba(245, 155, 26, 1) 0%, rgba(14, 216, 132, 1) 47%, rgba(0, 9, 184, 1) 97%);
+ */
+    background: url(../assets/limones.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.img{
+    width: 500px;
+    height: 200px;
+    margin: 30px;
+}
+
+.img1{
+    background-color: blue;
+}
+
+.img2{
+    background-image: url(../assets/fresas.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+.img3{
+    background-image: url(../assets/uvas.webp), url(../assets/limones.webp);
+    background-position: center;
+    background-blend-mode:luminosity;
+}
