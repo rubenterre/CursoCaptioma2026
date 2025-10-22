@@ -75,6 +75,8 @@ button {
     justify-content: space-between;
 }
 
+/* Item 1 */
+
 .item-1{
     grid-area: item-1;
     background: var(--color-primary);
@@ -95,7 +97,10 @@ button {
     margin-top: .5rem;
 }
 
+/* Fin de Item 1 */
 
+
+/* Item 2 */
 
 .item-2{
     grid-area: item-2;
@@ -118,6 +123,10 @@ button {
     margin-top: .5rem;
 }
 
+/* Fin de Item 2 */
+
+
+/* Item 3 */
 
 .item-3{
     grid-area: item-3;
@@ -140,6 +149,11 @@ button {
     margin-top: .5rem;
 }
 
+/* Fin de Item 3 */
+
+
+/* Item 4 */
+
 .item-4{
     grid-area: item-4;
     background-color: var(--color-secondary);
@@ -160,3 +174,5 @@ button {
     font-size: 0.8rem;
     margin-top: .5rem;
 }
+
+/* Fin de Item 4 */
