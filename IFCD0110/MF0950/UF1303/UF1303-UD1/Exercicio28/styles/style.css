@@ -1,0 +1,59 @@
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: grey;
+  color: white;
+  padding: 20px;
+}
+
+body,
+input,
+button {
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Estilos xerais */
+
+h1{
+    text-align: center;
+    padding: 20px;
+}
+
+.contedor {
+  border: 3px solid #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.caixa {
+  background-color: #f0f0f0;
+  border: 1px solid #999;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  color: #333;
+  flex-basis: 100px;
+}
+
+.caixa2, .caixa4 {
+flex-grow: 1;
+}
+.caixa3 {
+flex-grow: 2;
+}
+
+

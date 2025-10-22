@@ -1,0 +1,85 @@
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --color-primary: #f1f8fe;
+    --color-secondary: #1a96dd;
+    --color-tertiary: #0c2b45;
+}
+
+body {
+ background: var(--color-tertiary);
+ color: var(--color-primary);
+ -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+ font-family: sans-serif;
+}
+
+button {
+ cursor: pointer;
+}
+
+/* Estilos xerais */
+
+/* Header */
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+a{
+    color: var(--color-primary);
+    font-size: clamp(1rem, 2.5vw, 2rem);
+}
+
+/* Tarxetas */
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.tarxeta{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-secondary);
+    padding: 20px;
+    border-radius: 30px;
+    flex-basis: 250px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 4px 5px transparent;
+}
+
+.tarxeta:hover{
+    box-shadow: 2px 4px 5px var(--color-primary);
+    transition: all .5s ease;
+
+}
+
+.tarxeta__img{
+    max-width: 100px;
+}
+
+.tarxeta__p{
+    text-align: center;
+}

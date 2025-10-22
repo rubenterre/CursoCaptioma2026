@@ -1,0 +1,66 @@
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+
+body {
+ background: white;
+ color: black;
+ height: 200vh;
+}
+
+body, input, button {
+ font-family: sans-serif;
+}
+
+button {
+ cursor: pointer;
+}
+
+/* Estilos xerais */
+
+.header{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    width: 100vw;
+    background-color: black;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+
+.header__nav{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header__a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.uptotop{
+    color: white;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+}
+
+.uptotop__img{
+    width: 40px;
+}

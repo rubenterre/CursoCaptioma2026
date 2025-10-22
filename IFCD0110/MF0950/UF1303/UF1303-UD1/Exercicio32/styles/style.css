@@ -1,0 +1,71 @@
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background: gray;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+button {
+  font-family: sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Estilos xerais */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
+}
+
+.box{
+    height: 40px;
+}
+
+.px-box {
+  width: 200px;
+  background-color: rgb(14, 133, 133);
+}
+
+.percent-box {
+  width: 50%;
+  background-color: blue;
+}
+
+.em-box {
+  font-size: 1.5em;
+  background-color: brown;
+}
+
+.rem-box {
+  font-size: 1.5rem;
+  background-color: blueviolet;
+}
+
+.vw-box {
+  width: 50vw;
+  background-color: cadetblue;
+}
+
+.vh-box {
+  height: 20vh;
+  background-color: chocolate;
+}

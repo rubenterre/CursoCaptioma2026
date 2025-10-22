@@ -1,0 +1,60 @@
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html{
+ font-size: 14px;
+ scroll-behavior: smooth;
+}
+
+body {
+ background: gray;
+ color: white;
+ -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+ font-family: sans-serif;
+}
+
+button {
+ cursor: pointer;
+}
+
+/* Estilos xerais */
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 80px 2fr 80px;
+    grid-template-areas: 
+        "header header"
+        "aside main"
+        "footer footer";
+    height: 100vh;
+}
+
+.header{
+    background-color: aquamarine;
+    grid-area: header;
+}
+
+.aside{
+    background-color: blue;
+    grid-area: aside;
+}
+
+.main{
+    background-color: blueviolet;
+    grid-area: main;
+}
+
+.footer{
+    background-color: brown;
+    grid-area: footer;
+}
