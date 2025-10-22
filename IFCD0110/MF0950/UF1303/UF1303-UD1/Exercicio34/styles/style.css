@@ -75,6 +75,12 @@ button {
     justify-content: space-between;
 }
 
+.item__p{
+    font-family: var(--font-secondary);
+    font-size: 0.8rem;
+    margin-top: .5rem;
+}
+
 /* Item 1 */
 
 .item-1{
@@ -89,12 +95,6 @@ button {
 .item-1 .item__h3{
     font-size: 1.7rem;
     width: 100px;
-}
-
-.item-1 .item__p{
-    font-family: var(--font-secondary);
-    font-size: 0.8rem;
-    margin-top: .5rem;
 }
 
 /* Fin de Item 1 */
@@ -117,12 +117,6 @@ button {
     width: 100px;
 }
 
-.item-2 .item__p{
-    font-family: var(--font-secondary);
-    font-size: 0.8rem;
-    margin-top: .5rem;
-}
-
 /* Fin de Item 2 */
 
 
@@ -143,12 +137,6 @@ button {
     width: 100px;
 }
 
-.item-3 .item__p{
-    font-family: var(--font-secondary);
-    font-size: 0.8rem;
-    margin-top: .5rem;
-}
-
 /* Fin de Item 3 */
 
 
@@ -167,12 +155,6 @@ button {
 .item-4 .item__h3{
     font-size: 1rem;
     width: 100px;
-}
-
-.item-4 .item__p{
-    font-family: var(--font-secondary);
-    font-size: 0.8rem;
-    margin-top: .5rem;
 }
 
 /* Fin de Item 4 */
