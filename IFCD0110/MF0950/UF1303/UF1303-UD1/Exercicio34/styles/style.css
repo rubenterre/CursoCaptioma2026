@@ -158,3 +158,19 @@ button {
 }
 
 /* Fin de Item 4 */
+
+/* Media quries */
+
+@media (max-width:768px){
+
+    body{
+        display: flex;
+        align-items: start;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
