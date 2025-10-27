@@ -1,0 +1,137 @@
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: Dosis;
+    src: url(./fonts/Dosis-VariableFont_wght.ttf);
+}
+
+:root{
+    --color-primary:#fff;
+    --color-secondary: #a33a0a;
+    --color-tertiary: #f97604d2;
+    --color-background: linear-gradient(90deg,rgba(253, 29, 29,
+0.47) 50%, rgba(252, 176, 69, 0.78) 100%), url(../assets/laranxas.avif);
+    --font-primary: Dosis;
+
+    --color-lima-50: #f3f9ec;
+--color-lima-100: #e4f2d5;
+--color-lima-200: #cae7af;
+--color-lima-300: #a8d680;
+--color-lima-400: #89c358;
+--color-lima-500: #77bb41;
+--color-lima-600: #51852b;
+--color-lima-700: #3f6625;
+--color-lima-800: #355222;
+--color-lima-900: #2f4621;
+--color-lima-950: #16260d;
+}
+
+body {
+ background: var(--color-background);
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+ height: 100vh;
+ width: 100vw;
+ color: var(--color-primary);
+ -webkit-font-smoothing: antialiased;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+body, input, button {
+ font-family: var(--font-primary);
+}
+
+button {
+ cursor: pointer;
+}
+
+/* Estilos xerais */
+
+/* CARD */
+
+.card{
+    width: 300px;
+    height: 450px;
+    background: url(../assets/laranxas.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 2px 4px 8px rgb(48, 48, 48);
+
+    display: flex;
+    align-items: end;
+}
+
+.card__titular{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px;
+    background-color: var(--color-tertiary);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.card__h1{
+    font-family: var(--font-primary);
+    font-size: 2.4rem;
+}
+
+.card__p{
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card__a{
+    background-color: var(--color-primary);
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    border-radius: 20px;
+}
+
+.card__a:hover{
+    box-shadow: 2px 3px 6px rgb(49, 49, 49);
+}
+
+
+/* DETRÁS */
+
+.card__tabla{
+    border-top: 1px solid var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.card__td{
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.card__td--dato{
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    text-align: right;
+}

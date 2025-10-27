@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body {
+ background: white;
+ color: black;
+ -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+ font-family: sans-serif;
+}
+
+button {
+ cursor: pointer;
+}
+
+/* Estilos animación */
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    animation: movemento 1.5s ease infinite alternate;
+}
+
+@keyframes movemento {
+
+    0%{
+        transform: translateY(300px);
+    }
+
+    50%{
+        scale: 2;
+        transform: rotate(90deg);
+    }
+
+    100%{
+        background-color: aqua;
+    }
+    
+}
