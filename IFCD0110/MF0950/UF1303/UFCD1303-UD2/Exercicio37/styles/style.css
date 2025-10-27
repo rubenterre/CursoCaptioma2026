@@ -24,18 +24,6 @@ html{
     --color-background: linear-gradient(90deg,rgba(253, 29, 29,
 0.47) 50%, rgba(252, 176, 69, 0.78) 100%), url(../assets/laranxas.avif);
     --font-primary: Dosis;
-
-    --color-lima-50: #f3f9ec;
---color-lima-100: #e4f2d5;
---color-lima-200: #cae7af;
---color-lima-300: #a8d680;
---color-lima-400: #89c358;
---color-lima-500: #77bb41;
---color-lima-600: #51852b;
---color-lima-700: #3f6625;
---color-lima-800: #355222;
---color-lima-900: #2f4621;
---color-lima-950: #16260d;
 }
 
 body {
