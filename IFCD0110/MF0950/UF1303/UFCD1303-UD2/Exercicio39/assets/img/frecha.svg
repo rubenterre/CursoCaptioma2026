@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="34px" viewBox="0 0 35 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrow</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Extra-Large" transform="translate(-371, -771)" fill="#000000">
+            <g id="MAIN" transform="translate(215, 269)">
+                <g id="Button" transform="translate(5, 493)">
+                    <g id="arrow" transform="translate(168.4999, 26) rotate(45) translate(-168.4999, -26)translate(156.4999, 14)">
+                        <polygon id="arrow_outward" points="5.00006104 16.600065 14.600067 7.00005904 6.00006004 7.00005904 6.00006004 5.00006104 18.000061 5.00006104 18.000061 17.000062 16.000063 17.000062 16.000063 8.40005504 6.40005704 18.000061"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
