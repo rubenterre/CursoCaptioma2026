@@ -1,0 +1,247 @@
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url(./fonts/Poppins-Medium.ttf);
+}
+
+:root{
+    --color-primary: #D0FF00;
+    --color-secondary: #fff;
+    --color-gradient: rgba(255, 255, 255, 0.06);
+    --color-border: rgba(255, 255, 255, 0.29);
+    --color-text-buttons: black;
+    --font-primary: Poppins-Regular;
+    --font-secondary: Poppins-Medium;
+}
+
+body {
+ background: url(../assets/img/Fondo.webp);
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ color: var(--color-secondary);
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ max-width: 1400px;
+ margin: 0 auto;
+ padding: 45px 20px;
+}
+
+body, input, button {
+ font-family: var(--font-primary);
+}
+
+button {
+ cursor: pointer;
+}
+
+/* Estilos xerais */
+
+/* HEADER */
+
+.header{
+    height: 105px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-gradient);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-border);
+    border-radius: 40px;
+    padding: 0px 40px;
+}
+
+.header__logo{
+    max-width: 100%;
+    height: 25px;
+}
+
+.header__nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.header__a{
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.header__a--active{
+    color: var(--color-primary);
+}
+
+.header__signup{
+    width: 94px;
+    height: 52px;
+    background: var(--color-primary);
+    border-radius: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+/* MAIN */
+
+.main{
+    flex-grow: 1;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    flex-basis: 50vw;
+    margin-top: 5rem;
+}
+
+.hero__h1{
+    font-family: var(--font-secondary);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 500;
+    line-height: 5.6rem;
+    max-width: 20ch;
+}
+
+.hero__p{
+    font-family: var(--font-primary);
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-weight: 400;
+    max-width: 65ch;
+}
+
+.hero__buttons{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.hero__a{
+    background: var(--color-primary);
+    width: 222px;
+    height: 52px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.hero__a--saber{
+    background: var(--color-secondary);
+}
+
+/* FOOTER */
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6rem;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+
+body{
+    height: auto;
+}
+
+.header {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.header__nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.header__a{
+    width: 100%;
+    background-color: var(--color-secondary);
+    height: 45px;
+    color: var(--color-text-buttons);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__signup{
+    width: 100%;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+}
+
+.hero{
+    padding: 2rem;
+    flex-basis: 100vw;
+    align-items: center;
+}
+
+.hero__h1{
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.hero__p{
+    width: 100%;
+    text-align: center;
+}
+
+.hero__buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+}
+
+
+}
