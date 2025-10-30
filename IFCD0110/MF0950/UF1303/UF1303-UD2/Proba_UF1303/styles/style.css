@@ -1,0 +1,154 @@
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+:root{
+    --color-text: #3498db;
+    --color-background: #474e54;
+    --color-link: #e74c3c;
+    --color-hover: #2ecc71;
+    --color-card: #0F2942;
+    --color-mobile: #2f4f4f;
+}
+
+body {
+ background: var(--color-background);
+ color: var(--color-text);
+ font-weight: bold;
+ -webkit-font-smoothing: antialiased;
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+body, input, button {
+ font-family: Arial, sans-serif;
+}
+
+button {
+ cursor: pointer;
+}
+
+a{
+    color: var(--color-link);
+}
+
+a:hover{
+    color: var(--color-hover);
+}
+
+
+/* Estilos xerais */
+
+
+/* HEADER */
+
+.header{
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-card);
+}
+
+.header__ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 100vw;
+}
+
+
+
+/* MAIN */
+
+.main{
+    flex-grow: 1;
+}
+
+#servizos{
+    padding: 1rem;
+}
+
+.servizos__titulo{
+    padding: 1rem;
+}
+
+.servizos__h2{
+    text-align: center;
+}
+
+
+.servizos__card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    background: var(--color-card);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    width: 250px;
+    transition: all 0.5s ease;
+    box-shadow: 2px 4px 5px transparent;
+}
+
+.card:hover{
+    box-shadow: 2px 4px 5px black;
+}
+
+
+.card__images{
+    display: flex;
+    justify-content: center;
+}
+
+
+.card__img{
+    animation: balanceo 1s ease infinite;
+}
+
+@keyframes balanceo {
+    
+0%,100%{
+    rotate: 20deg;
+}
+
+50%{
+    rotate: -20deg;
+}
+
+}
+
+/* FOOTER */
+
+.footer__p{
+    text-align: center;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width:768px){
+
+html{
+    font-size: 14px;
+}
+
+ body{
+    background: var(--color-mobile);
+ }
+
+}
