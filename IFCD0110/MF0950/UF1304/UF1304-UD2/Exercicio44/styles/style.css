@@ -1,0 +1,85 @@
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+:root{
+    --color-primary: #000000;
+    --color-secondary: #925E45;
+    --color-tertiary: #454545;
+    --color-light: #fff;
+    --font-primary: Montserrat;
+}
+
+body {
+ background: var(--color-light);
+ color: var(--color-primary);
+ -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+ font-family: var(--font-primary);
+}
+
+button {
+ cursor: pointer;
+}
+
+/* Estilos xerais */
+
+/* GLOBAL */
+
+.global__button{
+padding: 1rem 2rem;
+border-radius: 50px;
+background: var(--color-secondary);
+color: var(--color-light);
+text-transform: uppercase;
+font-weight: 600;
+text-decoration: none;
+border: 0;
+}
+
+/* HERO */
+
+ .hero-bg {
+      background: url(../assets/img/cafe_hero.png) center/cover no-repeat;
+      border-radius: 2rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+      min-height: 370px;
+      display: flex;
+      align-items: center;
+      padding: 3rem;
+    }
+
+.hero__h1{
+    color: var(--color-light);
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.hero__h3{
+    color: var(--color-light);
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    text-align: center;
+    font-weight: 400;
+}
+
+.input-address{
+    padding: 1rem 2rem;
+}
+
