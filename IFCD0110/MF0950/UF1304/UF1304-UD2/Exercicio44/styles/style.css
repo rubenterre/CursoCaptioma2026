@@ -40,46 +40,51 @@ button {
 
 /* Estilos xerais */
 
-/* GLOBAL */
+/* Global */
 
 .global__button{
-padding: 1rem 2rem;
-border-radius: 50px;
-background: var(--color-secondary);
-color: var(--color-light);
-text-transform: uppercase;
-font-weight: 600;
-text-decoration: none;
-border: 0;
-}
-
-/* HERO */
-
- .hero-bg {
-      background: url(../assets/img/cafe_hero.png) center/cover no-repeat;
-      border-radius: 2rem;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.13);
-      min-height: 370px;
-      display: flex;
-      align-items: center;
-      padding: 3rem;
-    }
-
-.hero__h1{
-    color: var(--color-light);
-    font-weight: 700;
-    font-size: 2.5rem;
-    text-align: center;
-}
-
-.hero__h3{
-    color: var(--color-light);
-    font-size: clamp(1rem, 2vw, 1.4rem);
-    text-align: center;
-    font-weight: 400;
-}
-
-.input-address{
+    background: var(--color-secondary);
     padding: 1rem 2rem;
+    text-decoration: none;
+    color: var(--color-light);
+    font-weight: 600;
+    border: 0px;
+    text-align: center;
 }
 
+.global__button--saber{
+    max-width: 186px;
+}
+
+/* Header */
+
+.logo{
+    width: 84px;
+}
+
+/* Hero */
+
+.hero{
+    background: url(../assets/img/cafe_hero.png) center/cover no-repeat;
+/*     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+
+}
+
+.hero__p{
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.form{
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* About */
+
+.about__h2{
+    font-weight: 600;
+    font-size: 2.5rem;
+}
