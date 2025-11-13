@@ -18,8 +18,8 @@ let string = "María"; // String
 let booleanTrue = true;
 let booleanFalse = false; //Booleanos
 
-let array = [1,2,3,4] //Array
-let arrayString = ["María","Juan", "Pepe"] // Array admite todo tipo de datos
+let array = [1, 2, 3, 4] //Array
+let arrayString = ["María", "Juan", "Pepe"] // Array admite todo tipo de datos
 
 let obxecto = {
     nome: "David",
@@ -45,7 +45,7 @@ let multiplicacion = 4 * 3;
 
 let division = 4 / 3;
 
-let modulo = 12 % 2; 
+let modulo = 12 % 2;
 
 
 
@@ -87,9 +87,9 @@ const idade = 20;
 const tenLicencia = true;
 
 if (idade >= 18 && tenLicencia) {
-  console.log("Podes conducir."); // Execútase porque ámbalas dúas condicións son true.
+    console.log("Podes conducir."); // Execútase porque ámbalas dúas condicións son true.
 } else {
-  console.log("Non podes conducir.");
+    console.log("Non podes conducir.");
 }
 
 //Operador OR (||) devolve true se alomenos un dos operandos é true, do contrario devolve false
@@ -98,9 +98,9 @@ const tenTarxeta = false;
 const tenPayPal = true;
 
 if (tenTarxeta || tenPayPal) {
-  console.log("Podes realizar o pago."); // Execútase porque unha das condicións é true.
+    console.log("Podes realizar o pago."); // Execútase porque unha das condicións é true.
 } else {
-  console.log("Non podes realizar o pago.");
+    console.log("Non podes realizar o pago.");
 }
 
 
@@ -109,9 +109,9 @@ if (tenTarxeta || tenPayPal) {
 const acceso = false;
 
 if (!acceso) {
-  console.log("Acceso denegado."); // Execútase porque !false é true.
+    console.log("Acceso denegado."); // Execútase porque !false é true.
 } else {
-  console.log("Benvido!");
+    console.log("Benvido!");
 }
 
 
@@ -121,76 +121,76 @@ if (!acceso) {
 
 //Comentarios en JavaScript
 
-    /* Este é un comentario en de varias liñas */
+/* Este é un comentario en de varias liñas */
 
-    //Comentario dunha soa liña
+//Comentario dunha soa liña
 
 
 
 //Estruturas de control
 
-    //Estruturas de control de fluxo
+//Estruturas de control de fluxo
 
-    let condition = "";
-    let expresion = "";
+let condition = "";
+let expresion = "";
 
-    //if
-    if (condition) {
-        //Bloque de código se se cumple a condición
-    } else {
-        //Bloque de código que se executa se non se cumple a condición
-    }
+//if
+if (condition) {
+    //Bloque de código se se cumple a condición
+} else {
+    //Bloque de código que se executa se non se cumple a condición
+}
 
-    // else if
+// else if
 
-    if (condition) {
+if (condition) {
 
-        //Bloque de primeira condición a avaliar
+    //Bloque de primeira condición a avaliar
 
-    } else if (condition) {
+} else if (condition) {
 
-        //Bloque de segunda condición que se avalia se a primeira é verdadeira
-        
-    } else {
+    //Bloque de segunda condición que se avalia se a primeira é verdadeira
 
-        //Bloque de código alternativo que se executa se unha das condicións non é verdadeira
-    }
+} else {
 
-
-    // switch
-
-    let value1 = "";
-    let value2 = "";
-
-    switch (expresion) {
-        case value1:
-            //Bloque de código que queremos executar se se cumple o caso
-            break;
-        case value2:
-            //Bloque de código que queremos executar se se cumple o caso
-            break;
-    
-        default:
-            //Bloque de código alternativo se non se cumple ningún caso
-            break;
-    }
+    //Bloque de código alternativo que se executa se unha das condicións non é verdadeira
+}
 
 
+// switch
 
-        //Estruturas de control de bucle
+let value1 = "";
+let value2 = "";
+
+switch (expresion) {
+    case value1:
+        //Bloque de código que queremos executar se se cumple o caso
+        break;
+    case value2:
+        //Bloque de código que queremos executar se se cumple o caso
+        break;
+
+    default:
+        //Bloque de código alternativo se non se cumple ningún caso
+        break;
+}
 
 
-    //for
 
-   for (let index = 0; index < array.length; index++) {
+//Estruturas de control de bucle
+
+
+//for
+
+for (let index = 0; index < array.length; index++) {
     //Bloque de código que queres que se execute no bucle
-   }
+}
 
-   //while
+//while
 
-   while (condition) {
+while (condition) {
     //Bloque de código que se executa sempre que se cumpla a condición
-   }
+}
 
 
 
@@ -198,59 +198,79 @@ if (!acceso) {
 
 
 
-   //Funcións
+//Funcións
 
-   function nomeFuncion(params) {
+function nomeFuncion(params) {
     //Bloque de código a executar cando a chamamos
-   }
+}
 
-   nomeFuncion()
-
-
+nomeFuncion()
 
 
 
-   //Obxectos de JavaScript
-
-   let obxectos = {
-        clave: "valor",
-        clave2: "valor2"
-   }
 
 
-    let persoa = {
-     nome: "Juan",
-     idade: 30,
-     cidade: "Santiago de Compostela",
-     saudar: function() {
+//Obxectos de JavaScript
+
+let obxectos = {
+    clave: "valor",
+    clave2: "valor2"
+}
+
+
+let persoa = {
+    nome: "Juan",
+    idade: 30,
+    cidade: "Santiago de Compostela",
+    saudar: function () {
         console.log("Hola, son " + this.nome + " e teño " + this.idade + " anos")
-     }
-   }
+    }
+}
 
-   console.log(persoa.saudar())
-
-
-   // Array
-
-   let arrayVariosDatos = [1,"María", true, {nome: "Juan"}, [1,2,3]] //Array admite todo tipo de datos
+console.log(persoa.saudar())
 
 
-   //JSON
+// Array
 
-   let json = {
+let arrayVariosDatos = [1, "María", true, { nome: "Juan" }, [1, 2, 3]] //Array admite todo tipo de datos
+
+
+//JSON
+
+let json = {
     "nome": "Juan",
     "idade": 30
-   } //JSON admite todo tipo de datos
-
-   
+} //JSON admite todo tipo de datos
 
 
-   // Eventos
 
-   let boton = document.getElementById("meuBoton");
 
-   function cambiarColor() {
+// Eventos
+
+let boton = document.getElementById("meuBoton");
+
+function cambiarColor() {
     document.querySelector("body").style.backgroundColor = "red";
-   }
+    boton.style.color = "brown"
+}
 
-   boton.addEventListener("click", cambiarColor)
+boton.addEventListener("click", cambiarColor)
+
+// Aplicar tamaño máis grande
+function cambiarTamano() {
+
+    boton.style.width = "200px"
+
+}
+
+// Cambiar fondo cun click e logo volver a quitar o fondo con outro click
+
+    document.getElementById("cambiarFondo").addEventListener("click", function () {
+     
+        if(document.body.classList.contains("azul")){
+            document.body.classList.remove("azul") //borramos clase
+        }else{
+            document.body.classList.add("azul") //ponemos clase
+        }
+        /* document.body.classList.toggle("azul"); */   
+    });
