@@ -121,7 +121,8 @@ if (!acceso) {
 
 //Comentarios en JavaScript
 
-/* Este é un comentario en de varias liñas */
+/* Este é un comentario 
+en de varias liñas */
 
 //Comentario dunha soa liña
 

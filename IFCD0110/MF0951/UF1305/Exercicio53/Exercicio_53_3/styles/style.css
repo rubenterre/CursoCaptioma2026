@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html{
+ font-size: 14px;
+ scroll-behavior: smooth;
+}
+
+:root{
+    --color-primary: ;
+    --color-secondary: ;
+    --color-tertiary: ;
+    --font-primary: ;
+}
+
+
+
+body {
+ background: gray;
+ color: white;
+ height: 100vh;
+ width: 100vw;
+}
+
+body, input, button {
+ font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+ cursor: pointer;
+}
+
+/* Estilos xerais */
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.deuses{
+    box-shadow: 2px 4px 10px black;
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 500px;
+        background-color: white;
+    color: darkslategray;
+}
+
+.deuses__h1{
+    text-align: center;
+    margin: 1rem 0px;
+    text-transform: uppercase;
+}
+
+.deuses__card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 0px;
+}
+
+.deuses__details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 300px;
+    height: 100px;
+    margin: 1rem 0px;
+}
+
+.deuses__deus{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.deuses__descricion{
+    text-align: center;
+}
+
+.deuses__imaxe{
+    height: 300px;
+}
+
+#imaxe{
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 1rem 0px;
+    box-shadow: 1px 2px 5px black;
+}
+
+.deuses__botons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.deuses__botons button{
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
