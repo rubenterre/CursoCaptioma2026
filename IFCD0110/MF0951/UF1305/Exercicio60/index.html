@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="gl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 60</title>
+    <link rel="stylesheet" href="./styles/bulma.min.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav
+        class="navbar is-dark"
+        role="navigation"
+        aria-label="main navigation"
+      >
+        <div class="navbar-brand">
+          <a
+            class="navbar-item is-size-3 has-text-weight-bold"
+            href="index.html"
+          >
+            WeatherApp
+          </a>
+
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a href="index.html" class="navbar-item"> Inicio </a>
+
+            <a onclick="actualizarDatos(42.61, -8.79)" class="navbar-item"> Vilagarcía de Arousa </a>
+
+            <a onclick="actualizarDatos(42.88, -8.62)" class="navbar-item"> Santiago de Compostela </a>
+          </div>
+
+          <!--     <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+        </div>
+      </div>
+    </div> -->
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="columns">
+          <div
+            class="column is-flex is-flex-direction-column is-align-items-center"
+          >
+            <img
+              id="iconWeather"
+              class="tempo__icono"
+              src="./assets/iconos/01d.png"
+              alt="Icono do tempo metereolóxico"
+            />
+            <h2
+              id="weatherToday"
+              class="tempo__descricion is-size-2 has-text-weight-bold"
+            >
+              Soleado
+            </h2>
+            <p id="temperatureToday" class="tempo__temperatura is-size-3">
+              22ºC
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="columns p-3">
+          <div class="column">
+            <div class="box is-flex is-justify-content-space-between">
+              <p class="box__p has-text-weight-bold">Temperatura máxima:</p>
+              <p id="tempMax" class="box__p">24ºC</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box is-flex is-justify-content-space-between">
+              <p class="box__p has-text-weight-bold">Temperatura mínima:</p>
+              <p id="tempMin" class="box__p">24ºC</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box is-flex is-justify-content-space-between">
+              <p class="box__p has-text-weight-bold">Sensación térmica:</p>
+              <p id="feelsLike" class="box__p">24ºC</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box is-flex is-justify-content-space-between">
+              <p class="box__p has-text-weight-bold">Humidade:</p>
+              <p id="humidity" class="box__p">70%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
