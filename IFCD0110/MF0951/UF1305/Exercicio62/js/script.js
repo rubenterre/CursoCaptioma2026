@@ -10,8 +10,8 @@ const lon = params.get('lon');
 if (lat && lon) {
   actualizarDatos(lat, lon);
 } else {
-  // Usar valores por defecto para O Milladoiro
-  actualizarDatos(42.84, -8.57);
+  // Usar valores por defecto para Vilagarcía de Arousa
+  actualizarDatos(42.61, -8.79);
 }
 
 //Obter datos do tempo
@@ -27,7 +27,7 @@ async function obterDatosTempo(lat, lon) {
     }
     }
 
-console.log(obterDatosTempo("42.84","-8.57"))
+console.log(obterDatosTempo(42.61, -8.79))
 
 async function actualizarDatos(lon, lat) {
 
