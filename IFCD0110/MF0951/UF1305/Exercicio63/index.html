@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 63</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./favicon_dis_48x48_@x2.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main>
+      <header class="informacion">
+        <div class="informacion__logos">
+          <img
+            id="informacionLogo"
+            src="assets/Logos/logo_loki.png"
+            alt="Logo de la serie Loki"
+          />
+        </div>
+        <div class="informacion__detalles">
+          <div class="informacion__iconos">
+            <img
+              id="informacionIdade"
+              class="informacion__iconos--idade"
+              src="assets/iconos/12+.png"
+              alt="A partir de 12 anos"
+            />
+            <img
+              id="autodescripcion"
+              class="informacion__iconos--audiodescripcion"
+              src="assets/iconos/audiodescripcion.png"
+              alt="Audiodescripcións"
+            />
+            <img
+              class="informacion__iconos--subtitulos"
+              src="assets/iconos/subtitulos.png"
+              alt="Subtítulos"
+            />
+            <p id="informacionAnos" class="informacion__anos">2021-2023</p>
+            <p class="informacion__punto">•</p>
+            <p id="informacionTempada" class="informacion__temporadas">
+              2 tempadas
+            </p>
+
+          </div>
+          <div class="informacion__categorias">
+              <p id="informacionCategorias">
+                Ciencia ficción, Fantástica, Superhéroe, Acción e aventura
+              </p>
+          </div>
+        </div>
+        <div class="informacion__descripcion">
+          <p id="informacionDescripcion" class="informacion__sumario">
+            A nova serie Loki, de Marvel Studios, empeza alí onde terminou
+            Vengadores: Endgame. Nela, o voluble vilán Loki (Tom Hiddleston)
+            volve gañarse o alcume de Dios do Engano. Kate Herron é a súa
+            directora e Michael Waldron o guionista principal.
+          </p>
+          <div id="informacionTrailer">
+            <button class="informacion__button" data-series="Loki">
+              Trailer
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <nav class="menu" aria-label="Series">
+        <button onclick="botonSeriesLoki()" class="menu__boton" data-series="Loki">
+          <img
+            src="assets/cartel_Loki.png"
+            alt="Cartel da segunda tempada de Loki"
+          />
+        </button>
+        <button onclick="botonSeriesPercy()"  class="menu__boton" data-series="Percy">
+          <img
+            src="assets/cartel_PercyJackson.png"
+            alt="Cartel da primeira tempada de Percy Jackson"
+          />
+        </button>
+        <button class="menu__boton" data-series="Mandalorian">
+          <img
+            src="assets/cartel_mandalorian.png"
+            alt="Cartel da terceira tempada de Mandalorian"
+          />
+        </button>
+        <button class="menu__boton" data-series="Solo">
+          <img
+            src="assets/cartel_soloAsesinatos.png"
+            alt="Cartel da terceira tempada de Sólo asesinatos en el edificio"
+          />
+        </button>
+      </nav>
+
+      <div id="popup" class="contenedor">
+        <div class="popup">
+          <div id="popupIframe">
+            <iframe
+              id="iframe"
+              width="800"
+              height="450"
+              src="https://www.youtube.com/embed/fM7v_IFaH1g?si=p0WLKjeuBnc7ce_0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="popup__cerrar">
+            <button class="popup__button">Pechar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
