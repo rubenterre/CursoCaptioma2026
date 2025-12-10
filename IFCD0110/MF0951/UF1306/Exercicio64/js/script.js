@@ -91,7 +91,7 @@ async function actualizarDatos(lon, lat) {
     //Data formateada completa
     document.getElementById("data").textContent = `${diaSemanaActual}, ${diaMes} de ${mesActual} de ${dataAno}`;
 
-
+    
 
     //Amancer
     const timestampAmancer = data.sys.sunrise * 1000;
