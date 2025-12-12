@@ -70,3 +70,4 @@ function abrirDetalleMeteo(lat, lon) {
   const urlDetalle = `index.html?lat=${lat}&lon=${lon}`;
   window.open(urlDetalle, '_self');
 } 
+

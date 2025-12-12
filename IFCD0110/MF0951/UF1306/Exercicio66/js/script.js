@@ -52,8 +52,8 @@ async function actualizarDatos(lat, lon) {
 
            const dataAmancer = new Date(timestampAmancer);
 
-           const horaAmancer = dataAmancer.getHours();
-           const minutosAmancer = dataAmancer.getMinutes();
+           const horaAmancer = dataAmancer.getHours().toString().padStart(2, '0');
+           const minutosAmancer = dataAmancer.getMinutes().toString().padStart(2, '0');
 
            const horaAmancerFormateada = `${horaAmancer}:${minutosAmancer} AM`;
 
@@ -64,8 +64,8 @@ async function actualizarDatos(lat, lon) {
 
            const dataSolpor = new Date(timestampSolpor);
 
-           const horaSolpor = dataSolpor.getHours();
-           const minutosSolpor = dataSolpor.getMinutes();
+           const horaSolpor = dataSolpor.getHours().toString().padStart(2, '0');
+           const minutosSolpor = dataSolpor.getMinutes().toString().padStart(2, '0');
 
            const horaSolporFormateada = `${horaSolpor}:${minutosSolpor} PM`
 
@@ -135,3 +135,14 @@ async function actualizarDatos(lat, lon) {
     }
     
   }
+
+function abrirVilagarcia() {
+   const urlDetalle = `index.html?lat=42.61&lon=-8.79`;
+  window.open(urlDetalle, '_self');
+}
+
+function abrirBertamirans() {
+  
+   const urlDetalle = `index.html?lat=42.85&lon=-8.65`;
+  window.open(urlDetalle, '_self');
+}
