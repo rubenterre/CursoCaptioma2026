@@ -299,9 +299,9 @@ button {
   }
 
   #headerNav a{
-    border-top: 1px solid gray;
     border-bottom: 1px solid gray;
     padding: 10px 0px;
+    width: 50%;
   }
 
   .header__search{
