@@ -1,22 +1,6 @@
 <script>
-	const API_KEY = import.meta.env.VITE_API_KEY;
 
-	let popular = [];
-
-	async function seriesPopular() {
-		try {
-			const urlSeries = `https://api.themoviedb.org/3/tv/popular?api_key=${API_KEY}&language=es-ES&page=1`;
-
-			const response = await fetch(urlSeries);
-			const data = await response.json();
-			popular = data.results;
-			console.log(popular);
-		} catch {
-			('Non se atopa a serie');
-		}
-	}
-
-	seriesPopular();
+export let data;
     
 </script>
 
@@ -25,7 +9,7 @@
 
 <div class="main">
 	<div class="container">
-		{#each popular as serie}
+		{#each data.popular as serie}
 			<div class="card">
 				<img
 					class="card__img"
