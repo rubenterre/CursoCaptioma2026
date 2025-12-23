@@ -1,0 +1,26 @@
+---
+import proxectos from "../../data/proxectos.json";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  return proxectos.map((proxecto) => ({
+    params: { slug: proxecto.slug },
+    props: { proxecto },
+  }));
+}
+
+const { proxecto } = Astro.props;
+---
+
+<Layout titulo={proxecto.titulo} descricion={proxecto.descricion}>
+
+<article>
+  <h1>{proxecto.titulo}</h1>
+  <p>{proxecto.descricion}</p>
+  <img src={proxecto.images} alt={proxecto.titulo}>
+  <ul>
+    {proxecto.tecnoloxias.map((tech) => <li>{tech}</li>)}
+  </ul>
+</article>
+
+</Layout>

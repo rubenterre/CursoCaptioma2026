@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html{
+     font-size: 14px;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Niconne;
+    src: url(./fonts/Niconne-Regular.ttf);
+}
+
+:root{
+    --color-primary: #fff;
+    --color-secondary: #011313;
+    --font-primary: Montserrat;
+    --font-secondary: Niconne;
+}
+
+body {
+ background: url(../assets/boom.jpg);
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ color: white;
+ -webkit-font-smoothing: antialiased;
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+body, input, button {
+ font-family: var(--font-secondary);
+}
+
+button {
+ cursor: pointer;
+}
+
+/* Estilos xerais */
+
+.main{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+.main__h1{
+    font-family: var(--font-secondary);
+    font-size: 5rem;
+    font-weight: 300;
+    color: var(--color-primary);
+}
+
+.main__p{
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.main__button{
+    padding: 10px 40px;
+    font-size: 1.2rem;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    border-radius: 12px;
+    
+}
+
+.container{
+    width: 100%;
+    height: calc(100% - 80px);
+}
+
+.header__button{
+    width: 100px;
+    height: 30px;
+    
+}

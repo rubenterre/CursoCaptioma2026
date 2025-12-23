@@ -1,0 +1,39 @@
+---
+import Header from "../components/Header.astro";
+import Mensaxes from "../components/Mensaxes.astro";
+import Layout from "../layout/Layout.astro";
+
+const title = "Benvido/a a Astro!"
+
+const description = "A tua primeira páxina creada con Astro"
+
+import '../styles/global.css'
+
+
+import { Image } from 'astro:assets';
+import gransCafe from '../images/grans-cafe.jpg';
+
+---
+
+
+	<Layout title = "Inicio" description="Páxina de inicio">
+		<Header></Header>
+		<h1>{title}</h1>
+		<p>{description}</p>
+
+		<img class="img" src="./assets/cafe.jpg" alt="Imaxe dun café">
+
+		<Image class="img" src={gransCafe} alt="Grans de café">
+
+
+		<Mensaxes nome="Rubén"></Mensaxes>
+	</Layout>
+
+<style>
+
+.img{
+	width: 300px;
+	height: 100%;
+}
+
+</style>

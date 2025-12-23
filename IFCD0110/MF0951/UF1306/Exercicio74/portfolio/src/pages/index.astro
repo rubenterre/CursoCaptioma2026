@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Profesional from "../components/Profesional.astro";
+import Repositorios from "../components/Repositorios.astro";
+import Contacto from "../components/Contacto.astro";
+import Footer from "../components/Footer.astro";
+
+import proxectos from "../data/proxectos.json";
+---
+
+<Layout titulo="Inicio" descricion="Páxina de inicio do portfolio">
+  <Header />
+
+  <main class="main">
+    <Profesional />
+    <Repositorios />
+
+	<section class="main__section">	
+    <div >
+      {
+        proxectos.map((proxecto) => (
+          <div class="main__card">
+            <a class="card__a" href={`/proxectos/${proxecto.slug}`}>
+              {proxecto.titulo}
+            </a>
+          </div>
+        ))
+      }
+    </div>
+	</section>
+
+
+    <Contacto />
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+
+
+</style>

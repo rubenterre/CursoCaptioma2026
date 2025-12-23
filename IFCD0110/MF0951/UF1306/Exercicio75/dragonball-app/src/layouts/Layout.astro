@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="gl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Dragon Ball App</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  /* Reset CSS */
+
+  * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 14px;
+    scroll-behavior: smooth;
+  }
+
+  @font-face {
+    font-family: Russo;
+    src: url(./fonts/RussoOne-Regular.ttf);
+  }
+
+  :root {
+    --color-primary: #fff;
+    --color-secondary: #fbc02d;
+    --color-tertiary: #a4d66b;
+    --color-text: #383838;
+    --font-primary: Russo;
+  }
+
+  body {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body,
+  input,
+  button {
+    font-family: var(--font-primary);
+  }
+
+  button {
+    cursor: pointer;
+  }
+</style>

@@ -1,0 +1,208 @@
+---
+
+---
+
+    <header class="header">
+      <div class="header__logo">
+        <img
+          src="./assets/LOGO_RT.webp"
+          alt="Logo de Rubén Terré"
+          class="header__img"
+        />
+        <h1 class="header__h1">Rubén Terré</h1>
+        <h3 class="header__h3">
+          Desarrollador web, diseñador gráfico y docente en certificados de
+          profesionalidad.
+        </h3>
+        <div class="header__socials">
+          <a
+            href="https://www.linkedin.com/in/rubenterrelameiro"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./assets/icons/socials/linkedin.svg"
+              alt="LinkedIn de Rubén Terré"
+            />
+          </a>
+          <a
+            href="https://github.com/rubenterre"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./assets/icons/socials/github.svg"
+              alt="GitHub de Rubén Terré"
+            />
+          </a>
+          <a
+            href="https://www.behance.net/rubenterre"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./assets/icons/socials/behance.svg"
+              alt="Behance de Rubén Terré"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/rubenterre.studiodesign/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./assets/icons/socials/instagram.svg"
+              alt="Instagram de Rubén Terré"
+            />
+          </a>
+          <a
+            href="https://www.youtube.com/@rubenterre"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./assets/icons/socials/youtube.svg"
+              alt="YouTube de Rubén Terré"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="header__links">
+        <a href="mailto:info@rubenterre.com">
+          <div class="header__card card">
+            <div class="card__icon">
+              <div class="card__line"></div>
+              <img
+                class="card__img"
+                src="./assets/icons/email_icon.svg"
+                alt="Correo electrónico de Rubén Terré"
+                width="41"
+              />
+            </div>
+            <div class="card__description">
+              <p class="card__a">info@rubenterre.com</p>
+              <p class="card__p">Contáctame por correo</p>
+            </div>
+            <div class="card__arrow">
+              <img
+                class="card__url"
+                src="./assets/icons/arrow_icon.svg"
+                alt="Flecha que indica la acción de lanzar el correo electrónico"
+              />
+            </div>
+          </div>
+        </a>
+        <a href="https://rubenterre.com">
+          <div class="header__card card">
+            <div class="card__icon">
+              <div class="card__line"></div>
+              <img
+                class="card__img"
+                src="./assets/icons/link_icon.svg"
+                alt="Website de Rubén Terré"
+                width="41"
+              />
+            </div>
+            <div class="card__description">
+              <p class="card__a">Rubenterre.com</p>
+              <p class="card__p">Website portfolio personal</p>
+            </div>
+            <div class="card__arrow">
+              <img
+                class="card__url"
+                src="./assets/icons/arrow_icon.svg"
+                alt="Flecha que indica la acción de lanzar la web de Rubén Terré"
+              />
+            </div>
+          </div>
+        </a>
+
+        <div class="header__card card card--vcard">
+          <div class="card__icon">
+            <div class="card__line"></div>
+            <img
+              class="card__img--vcard"
+              src="./assets/QR_VCard.svg"
+              alt="QR con la VCard de Rubén Terré"
+              width="41"
+            />
+          </div>
+          <div class="card__description--vcard">
+            <h4 class="card__h4--vcard">Tarjeta de contacto VCARD</h4>
+            <p class="card__p--vcard">
+              Escanéa o haz clic para guardar mi contacto en tu móvil
+            </p>
+            <a href="./assets/vcard.vcf" class="card__download"
+              >Guardar en contactos</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <style>
+
+/*/ Header /*/
+
+.header{
+    margin: 3rem;
+}
+
+.header__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header__h1{
+    font-family: var(--font-tertiary);
+    color: var(--color-secondary);
+    font-size: 2rem;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.header__h3{
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    text-align: center;
+    width: 335px;
+}
+
+.header__socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 30px 0px;
+}
+
+.header__social{
+    width: 40px;
+}
+
+.header__links{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__card{
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background: var(--color-tertiary);
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    height: 81px;
+    width: 335px;
+    margin: 10px 0px;
+}
+
+
+    </style>

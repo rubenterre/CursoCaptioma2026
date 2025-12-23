@@ -1,0 +1,262 @@
+---
+const { titulo } = Astro.props;
+const { descricion } = Astro.props;
+---
+
+<!doctype html>
+<html lang="gl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{titulo}</title>
+    <meta name="description" content={descricion} />
+
+    <meta name="author" content="Rubén Arturo Terré Lameiro" />
+    <meta
+      property="og:title"
+      content="Rubén Terré. Diseñador gráfico, desarrollador web y docente"
+    />
+    <meta
+      property="og:description"
+      content="Esta es la tarjeta digital de Rubén Terré, en el que encontraréis su curriculum vitae y una muestra de sus habilidades, experiencia y formaciones."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rubenterre.com" />
+    <meta
+      property="og:image"
+      content="https://rubenterre.com/rubenterre__OGraph.jpeg"
+    />
+    <meta
+      property="og:site_name"
+      content="Rubén Terre - Diseñador gráfico, desarrollador web y docente"
+    />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Rubén Terre - Diseñador gráfico, desarrollador web y docente"
+    />
+    <meta
+      name="twitter:description"
+      content="Este es el portfolio de Rubén Terré, en el que encontraréis su curriculum vitae y una muestra de sus habilidades, experiencia y formaciones."
+    />
+    <meta
+      name="twitter:image"
+      content="https://rubenterre.com/rubenterre__OGraph.jpeg"
+    />
+    <meta name="twitter:site" content="@RubenTerre" />
+    <link rel="canonical" href="https://rubenterre.com" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url(./fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Sora-SemiBold;
+    src: url(./fonts/Sora-SemiBold.ttf);
+}
+
+
+:root{
+    --color-primary: #979797;
+    --color-secondary: #19EE92;
+    --color-tertiary: #191919;
+    --color-background: #0D0D0D;
+    --font-primary: Poppins-Regular;
+    --font-secondary: Poppins-SemiBold;
+    --font-tertiary: Sora-SemiBold;
+}
+
+body {
+ background: var(--color-background);
+ color: white;
+ -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+ font-size: 14px;
+ font-family: var(--font-primary);
+}
+
+button {
+ cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+.card__line{
+    width: 3px;
+    height: 50px;
+    background-color: white;
+}
+
+.card__icon{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+}
+
+.card__description{
+    display: flex;
+    flex-direction: column;
+}
+
+.card__a{
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.card__p{
+    font-family: var(--font-primary);
+    font-size: .8rem;
+    color: white;
+}
+
+.card__arrow{
+    padding: 0px 20px;
+}
+
+.card--vcard{
+    height: 168px!important;
+    grid-template-columns: 1fr auto;
+}
+
+.card__img--vcard{
+    width: 102px;
+}
+
+.card__description--vcard{
+    margin: 10px;
+}
+
+.card__h4{
+    font-family: var(--font-secondary);
+    font-size: .9rem;
+    margin-bottom: 5px;
+}
+
+.card__p--vcard{
+    font-family: var(--font-primary);
+    font-size: .7rem;
+    margin-bottom: 10px;
+}
+
+.card__download{
+    background-color: var(--color-secondary);
+    color: var(--color-background);
+    text-decoration: none;
+    font-family: var(--font-secondary);
+    font-size: .7rem;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.card__download:hover{
+    background-color: white;
+}
+
+/*/ Main /*/
+
+.main{
+    margin: 3rem;
+}
+
+.main__section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main__title{
+    margin: 10px 0px;
+}
+
+.main__h2{
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    margin: 20px 0px;
+}
+
+.main__hr{
+    width: 40px;
+    border:1px solid var(--color-secondary);
+    margin: 0 auto;
+}
+
+.main__cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__card{
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-tertiary);
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    height: 81px;
+    width: 335px;
+    gap: 10px;
+    margin: 10px 0px;
+}
+
+.main__cards--design{
+    flex-direction: column;
+}
+
+.main__a--button{
+    background: var(--color-tertiary);
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    width: 335px;
+    height: 57px;
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-tertiary);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.main__a--button:hover{
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+
+</style>

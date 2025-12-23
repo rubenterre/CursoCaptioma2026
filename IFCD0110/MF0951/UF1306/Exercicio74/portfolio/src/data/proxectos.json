@@ -1,0 +1,16 @@
+[
+{
+"slug": "proxecto-1",
+"titulo": "Deseño Web Responsivo",
+"descricion": "Un sitio adaptativo usando Astro",
+"tecnoloxias": ["Astro", "JavaScript", "CSS"],
+"images": "/icons/socials/github.svg"
+},
+{
+"slug": "proxecto-2",
+"titulo": "App de Notas",
+"descricion": "Xestión de tarefas con Svelte",
+"tecnoloxias": ["Svelte", "LocalStorage"],
+"images": "/icons/socials/github.svg"
+}
+]

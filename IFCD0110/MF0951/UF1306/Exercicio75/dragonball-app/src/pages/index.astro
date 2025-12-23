@@ -1,0 +1,170 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+
+const API_URL = "https://dragonball-api.com/api/characters?limit=100";
+
+async function obtenerPersonaxes() {
+  const response = await fetch(API_URL);
+  const data = await response.json();
+
+  const dataPersonaxes = data.items;
+  console.log(dataPersonaxes);
+
+  return dataPersonaxes;
+}
+
+const personaxes = await obtenerPersonaxes();
+
+---
+
+<Layout>
+  <Header />
+
+  <main class="main">
+    <section class="buscador">
+      <div class="buscador__header">
+        <h1 class="buscador__h1">Buscador de personaxes:</h1>
+        <input
+          type="search"
+          id="search"
+          class="buscador__input"
+          placeholder="Busca o teu personaxe aquí"
+        />
+      </div>
+      <div id="resultados" class="buscador__cards">
+        {
+          personaxes.map((personaxe) => (
+            <div id="card" class="buscador__card">
+              <div class="buscador__personaxe">
+                <img
+                  class="buscador__img"
+                  src={personaxe.image}
+                  alt={personaxe.name}
+                />
+              </div>
+              <div class="buscador__perfil">
+                <a href={`/personaxes/${personaxe.id}`} id="nome" class="buscador__p buscador__p--nome">
+                  {personaxe.name}
+                </>
+                <p class="buscador__p">
+                  <span>Ki</span>
+                  {personaxe.ki}
+                </p>
+                <p class="buscador__p">
+                  <span>Raza</span>
+                  {personaxe.race}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("search");
+    const cards = document.querySelectorAll(".buscador__card");
+
+    input.addEventListener("input", () => {
+      const termino = input.value.toLowerCase().trim();
+
+      cards.forEach((card) => {
+        const nome = card
+          .querySelector(".buscador__p--nome")
+          .textContent.toLowerCase();
+
+        card.style.display = nome.includes(termino) ? "block" : "none";
+
+        /* 		  if(nome.includes(termino)){
+			card.style.display = "block"
+		  }else{
+			card.style.display = "none"
+		  } */
+      });
+    });
+  });
+</script>
+
+<style>
+  /* Main */
+
+  .main {
+    background: url(./assets/bg_comics_pc.jpg);
+    background-size: contain;
+    background-position: center;
+    min-height: 100vh;
+  }
+
+  /* Buscador */
+
+  .buscador__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0px;
+  }
+
+  .buscador__input {
+    width: 80%;
+    height: 50px;
+    padding-left: 10px;
+  }
+
+  /* Cards */
+
+  .buscador__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .buscador__card {
+    width: 180px;
+  }
+
+  .buscador__personaxe {
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    border: 3px solid var(--color-secondary);
+    margin-bottom: 10px;
+    border-radius: 40px;
+    corner-top-left-shape: bevel;
+    corner-bottom-right-shape: bevel;
+    background: var(--color-primary);
+  }
+
+  .buscador__img {
+    max-width: 100%;
+    height: 180px;
+    transition:;
+  }
+
+  .buscador__p {
+    text-align: center;
+    padding: 5px 0px;
+    background-color: var(--color-primary);
+    border-radius: 40px;
+  }
+
+  .buscador__p span {
+    color: var(--color-secondary);
+  }
+
+  .buscador__p--nome {
+    text-align: center;
+    background: var(--color-secondary);
+    border-radius: 40px;
+    color: var(--color-primary);
+    padding: 5px 0px;
+    margin-bottom: 10px;
+  }
+</style>

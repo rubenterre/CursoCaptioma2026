@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 72</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="main__h1">Felices festas</h1>
+      <p class="main__p">Prepárate para sorpresas e alegría. <br>
+Preme o botón e celébralo!!</p>
+      <button class="main__button" id="iniciarBtn">Celebrar</button>
+    </main>
+
+    <div class="container fireworks"></div>
+
+<!-- Engadir o CDN de fireworks-js  -->
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+     
+<script src="./js/script.js"></script> 
+
+<!-- Confetti JS -->
+<script src="https://cdn.jsdelivr.net/npm/@hiseb/confetti@2.1.0/dist/confetti.min.js"></script>
+<script>
+  /*   confetti(); */
+
+    window.addEventListener("click", (event) => {
+    confetti({ position: { x: event.clientX, y: event.clientY } });
+});
+</script>
+</body>
+</html>
