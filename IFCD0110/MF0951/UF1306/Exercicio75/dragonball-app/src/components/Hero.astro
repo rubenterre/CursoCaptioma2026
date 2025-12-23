@@ -1,0 +1,64 @@
+---
+// import rellax from '../data/rellax.min.js';
+
+---
+
+<section class="hero">
+
+  <div class="rellax fondo" data-rellax-speed="1"></div>
+
+  <div class="rellax goku" data-rellax-speed="7">
+    <img src="/assets/goku.png" alt="Imaxe de Goku">
+  </div>
+
+</section>
+
+<script client:load src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+ 
+<script client:load>
+    var rellax = new Rellax('.rellax');
+</script>
+
+<style>
+
+.hero{
+    min-height: 300px;
+    width: 100vw;
+}
+
+.fondo{
+    background: url(/assets/fondo.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 600px;
+    position: relative;
+    top: 0px;
+}
+
+.goku{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+.goku img{
+    width: 450px;
+    filter: drop-shadow(0px 2px 4px rgb(53, 52, 52));
+    animation: suspension 3s ease-in-out infinite;
+}
+
+@keyframes suspension {
+
+    0%,100%{
+        transform: translateY(20%);
+    }
+    50%{
+        transform: translateY(10%);
+    }
+    
+}
+
+</style>
