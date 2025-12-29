@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="buscador">
+    <div class="buscador__header">
+      <h1 class="buscador__h1">Buscador de personaxes (Harry Potter):</h1>
+      <input
+        type="search"
+        id="search"
+        class="buscador__input"
+        placeholder="Busca o teu personaxe aquí"
+      />
+    </div>
+
+    <div id="resultados" class="buscador__cards"></div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const inputElement = document.getElementById('search');
+      const resultadosElement = document.getElementById('resultados');
+
+      if (!inputElement || !resultadosElement) return;
+
+      async function buscar() {
+        const raw = inputElement.value.toString().toLowerCase().trim();
+
+        if (!raw) {
+          resultadosElement.innerHTML = '';
+          return;
+        }
+
+        const API_URL = 'https://potterhead-api.vercel.app/api/characters';
+
+        try {
+          const response = await fetch(API_URL);
+
+          const data = await response.json();
+
+          // Filtramos por nome
+          const results = data.filter((personaxe) =>
+            personaxe.name.toLowerCase().includes(raw)
+          );
+
+          if (!results.length) {
+            resultadosElement.innerHTML = '<p>Non hai resultados.</p>';
+            return;
+          }
+
+          resultadosElement.innerHTML = results
+            .map((personaxe) => {
+              return `
+                <div class="buscador__card">
+                  <div class="buscador__personaxe">
+                    ${
+                      personaxe.image
+                        ? `<img class="buscador__img" src="${personaxe.image}" alt="${personaxe.name}" />`
+                        : ''
+                    }
+                  </div>
+                  <div class="buscador__perfil">
+                    <p class="buscador__p--nome">
+                      ${personaxe.name}
+                    </p>
+                    <p class="buscador__p">
+                      <span>Casa</span>
+                      ${personaxe.house || 'Descoñecida'}
+                    </p>
+                    <p class="buscador__p">
+                      <span>Actor/Actriz</span>
+                      ${personaxe.actor || 'Descoñecido'}
+                    </p>
+                  </div>
+                </div>
+              `;
+            })
+            .join('');
+        } catch (err) {
+          console.error('Error en fetch:', err);
+          resultadosElement.innerHTML = '<p>Erro de conexión coa API.</p>';
+        }
+      }
+
+      inputElement.addEventListener('input', buscar);
+    });
+  </script>
+</Layout>
