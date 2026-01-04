@@ -20,7 +20,7 @@ import Layout from '../layouts/Layout.astro';
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const inputElement = document.getElementById('search');
-      const resultadosElement = document.getElementById('resultados');
+      let resultadosElement = document.getElementById('resultados');
 
       if (!inputElement || !resultadosElement) return;
 
@@ -49,8 +49,7 @@ import Layout from '../layouts/Layout.astro';
             return;
           }
 
-          resultadosElement.innerHTML = results
-            .map((personaxe) => {
+          resultadosElement.innerHTML = results.map((personaxe) => {
               return `
                 <div class="buscador__card">
                   <div class="buscador__personaxe">
@@ -84,6 +83,82 @@ import Layout from '../layouts/Layout.astro';
       }
 
       inputElement.addEventListener('input', buscar);
+    
+    
+
+    //Función para listar los personajes  
+    async function obtenerPersonaxes() {
+
+      if(resultadosElement){
+
+        const API_Lista = 'https://potterhead-api.vercel.app/api/characters';
+
+        try {
+          const response = await fetch(API_Lista);
+
+          const data = await response.json();
+
+          console.log(data)
+
+          resultadosElement.innerHTML = data.map((personaxe) => {
+              return `
+                <div class="buscador__card">
+                  <div class="buscador__personaxe">
+                    ${
+                      personaxe.image
+                        ? `<img class="buscador__img" src="${personaxe.image}" alt="${personaxe.name}" />`
+                        : ''
+                    }
+                  </div>
+                  <div class="buscador__perfil">
+                    <p class="buscador__p--nome">
+                      ${personaxe.name}
+                    </p>
+                    <p class="buscador__p">
+                      <span>Casa</span>
+                      ${personaxe.house || 'Descoñecida'}
+                    </p>
+                    <p class="buscador__p">
+                      <span>Actor/Actriz</span>
+                      ${personaxe.actor || 'Descoñecido'}
+                    </p>
+                  </div>
+                </div>
+              `;
+            })
+
+      } catch (err) {
+          console.error('Error en fetch:', err);
+          resultadosElement.innerHTML = '<p>Erro de conexión coa API.</p>';
+        }
+
+      }
+
+      
+    }
+
+    obtenerPersonaxes()
+
     });
   </script>
 </Layout>
+
+<style is:global>
+
+
+.buscador__cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buscador__card{
+  max-width: 150px;
+}
+
+.buscador__img{
+  height: 150px;
+}
+
+</style>
