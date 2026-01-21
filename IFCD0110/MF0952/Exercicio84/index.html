@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 84</title>
+    <link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <div class="header__menu">
+          <button class="header__button">
+            <img
+              class="header__img--menu"
+              src="./assets/icons/menu-icon.svg"
+              alt="Icono de menu de navegación"
+            />
+            <p class="header__p">Menú</p>
+          </button>
+        </div>
+        <div class="header__logo">
+          <a href="/">
+              <img
+                src="./assets/porsche-logo.svg"
+                alt="Logo de Porsche"
+                class="header__img--logo"
+              />
+          </a>
+        </div>
+        <div class="header__user">
+          <a href="#">
+            <img
+              class="header__img--user"
+              src="./assets/icons/user-icon.svg"
+              alt="Icono de perfil de usuario"
+            />
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section class="hero__container">
+        <div class="hero__background">
+          <video class="hero__video" muted autoplay loop>
+            <source src="./assets/videos/video_fondo.mp4" type="video/mp4" />
+          </video>
+          <img
+            class="hero__logo"
+            src="./assets/taycan_logo.svg"
+            alt="Logo de Porsche Taycan"
+          />
+          <div class="hero__car">
+            <img
+              id="carHero"
+              class="hero__img--car"
+              src="./assets/cars/models/taycan-berlina.avif"
+              alt="Porsche Taycan Berlina"
+            />
+          </div>
+
+          <div class="hero__selector">
+            <div class="hero__buttons">
+              <button onclick="cambiarCoche(0)" class="hero__button">Berlina Deportiva</button>
+              <button onclick="cambiarCoche(1)" class="hero__button">Sport Turismo</button>
+              <button onclick="cambiarCoche(2)" class="hero__button">Cross Turismo</button>
+            </div>
+
+            <div class="hero__details">
+              <div class="hero__features">
+                <h2 id="nameHero" class="hero__h2">Taycan Berlina Deportiva</h2>
+                <div class="hero__pill">
+                  <p>Eléctrico</p>
+                </div>
+                <div class="hero__price">
+                  <p id="priceHero" class="hero__p--price">
+                    Desde EUR 106.252,00 PVP Recomendado1
+                  </p>
+                </div>
+              </div>
+
+              <div class="hero__config">
+                <button class="hero__button--cta">Cambiar modelo</button>
+                <button class="hero__button--config">Configurar</button>
+                <button class="hero__button--config">
+                  Compra vehículos nuevos y de ocasión
+                </button>
+              </div>
+              <div class="hero__legal">
+                <p id="legalHero" class="hero__p">
+                  Consumo eléctrico combinado - WLTP* (intervalo modelo): 19,4 –
+                  16,7 kWh/100 km, Consumo eléctrico bajo - WLTP* (intervalo
+                  modelo): 16,6 – 14,4 kWh/100 km, Consumo eléctrico medio -
+                  WLTP* (intervalo modelo): 16,6 – 13,8 kWh/100 km, Consumo
+                  eléctrico alto - WLTP* (intervalo modelo): 17,6 – 14,2 kWh/100
+                  km, Consumo eléctrico muy alto - WLTP* (intervalo modelo):
+                  22,8 – 18,2 kWh/100 km, Autonomía eléctrica en ciudad - WLTP*
+                  (intervalo modelo): 593 – 824 km, Autonomía eléctrica
+                  combinado - WLTP* (intervalo modelo): 521 – 680 km, Emisiones
+                  CO2 combinado (Gasolina y BEV)/ combinado ponderado (PHEV) -
+                  WLTP* (intervalo modelo): 0 – 0 g/km
+                </p>
+                <p class="hero__p">
+                  1 P.V.P. recomendado para península y Baleares. Incluye
+                  transporte, I.V.A. e impuesto de matriculación (IEDMT)
+                  calculado al tipo estatal aplicable según las emisiones de CO2
+                  del vehículo. El IEDMT puede variar en función de la Comunidad
+                  Autónoma donde se ubique su domicilio. Los precios aquí
+                  reflejados pueden sufrir modificaciones, y por tanto no son
+                  vinculantes.
+                </p>
+              </div>
+            </div>
+
+            <div class="details">
+              <div class="details__container">
+                <div class="details__details">
+                  <div class="details__card">
+                    <div class="details__numbers">
+                      <h1 id="aceleracion" class="details__h1">4,8</h1>
+                      <p class="details__p--units">S</p>
+                    </div>
+                    <p class="details__p">
+                      Aceleración 0-100 km/h con Launch Control
+                    </p>
+                  </div>
+
+                  <div class="details__card">
+                    <div class="details__numbers">
+                      <h1 id="powerKw" class="details__h1">300</h1>
+                      <p class="details__p--units">Kw</p>
+                      <p class="details__p--units">/</p>
+                      <h1 id="powerCv" class="details__h1">408</h1>
+                      <p class="details__p--units">CV</p>
+                    </div>
+                    <p class="details__p">
+                      Potencia máxima (kW)/Potencia máxima (CV)
+                    </p>
+                  </div>
+
+                  <div class="details__card">
+                    <div class="details__numbers">
+                      <h1 id="speed" class="details__h1">230</h1>
+                      <p class="details__p--units">km/h</p>
+                    </div>
+                    <p class="details__p">Velocidad máxima</p>
+                  </div>
+
+                  <button class="details__button">
+                    Todos los detalles técnicos
+                  </button>
+                </div>
+                <div class="details__car">
+                  <img
+                    id="carDetails"
+                    class="details__img"
+                    src="./assets/cars/front/frente-taycan-berlina.avif"
+                    alt="Imaxe de frente de Porsche Taycan Berlina"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__logo">
+          <a href="/" class="footer__a">
+            <img
+              class="footer__img"
+              src="./assets/porsche-logo.svg"
+              alt="Logo de Porsche"
+            />
+          </a>
+        </div>
+        <hr />
+        <div class="footer__credits">
+          <p class="footer__p">© 2025 Porsche Ibérica, S.A.</p>
+          <a
+            class="footer__a--legal"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Aviso Legal
+          </a>
+
+          <a
+            class="footer__a--legal"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Política de cookies
+          </a>
+
+          <a
+            class="footer__a--legal"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Otros Países
+          </a>
+
+          <a
+            class="footer__a--legal"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open Source Software Notice
+          </a>
+
+          <a
+            class="footer__a--legal"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Sistema de Denuncia de Irregularidades
+          </a>
+        </div>
+      </div>
+    </footer>
+
+<script src="./js/countUp.umd.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        /* Efecto contador */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const kw = new countUp.CountUp('powerKw', 300, { startVal: 0, duration: 2 });
+  const cv = new countUp.CountUp('powerCv', 408, { startVal: 0, duration: 2 });
+  const aceleracion = new countUp.CountUp('aceleracion', 4.8, {startVal: 0, duration: 2})
+  const speed = new countUp.CountUp('speed', 230, {startVal: 0, duration: 2})
+
+
+  const card = document.querySelector('.details__card');
+
+  /* Con esta parte conseguimos facer que o contador comece a funcionar cando o usuario che a el*/
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (!kw.error) kw.start();
+        if (!cv.error) cv.start();
+        if (!aceleracion.error) aceleracion.start();
+        if (!speed.error) speed.start();
+        obs.disconnect();
+      }
+    });
+  }, { threshold: 0.4 });
+
+  observer.observe(card);
+});
+
+    </script>
+  </body>
+</html>
