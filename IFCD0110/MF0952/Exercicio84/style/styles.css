@@ -212,10 +212,11 @@ button {
   border: 0px;
   background: transparent;
   font-family: var(--font-primary-400);
+  height: 55px;
 }
 
 .active {
-  border-bottom: 1px solid var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
 }
 
 .hero__details {

@@ -50,8 +50,32 @@ function cambiarCoche(indice) {
         document.getElementById('speed').textContent = modelos[indice].velocidad;
         document.getElementById('carDetails').src = modelos[indice].imagenFrontal;
         document.getElementById('carDetails').alt = modelos[indice].nombre;
+
+        
     } else {
         console.error('Índice de modelo no válido');
     }
 }
 
+/* Cambiar clase para active */
+
+document.getElementById("boton1").addEventListener("click", function() {
+    document.getElementById("boton1").classList.add("active");
+    document.getElementById("boton2").classList.remove("active");
+    document.getElementById("boton3").classList.remove("active");
+
+})
+
+document.getElementById("boton2").addEventListener("click", function() {
+    document.getElementById("boton1").classList.remove("active");
+    document.getElementById("boton2").classList.add("active");
+    document.getElementById("boton3").classList.remove("active");
+
+})
+
+document.getElementById("boton3").addEventListener("click", function() {
+    document.getElementById("boton1").classList.remove("active");
+    document.getElementById("boton2").classList.remove("active");
+    document.getElementById("boton3").classList.add("active");
+
+})
